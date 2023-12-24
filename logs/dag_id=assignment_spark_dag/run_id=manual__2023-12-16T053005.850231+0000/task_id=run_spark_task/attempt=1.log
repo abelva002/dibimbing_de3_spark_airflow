@@ -1,0 +1,117 @@
+[2023-12-16T05:30:07.957+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: assignment_spark_dag.run_spark_task manual__2023-12-16T05:30:05.850231+00:00 [queued]>
+[2023-12-16T05:30:07.967+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: assignment_spark_dag.run_spark_task manual__2023-12-16T05:30:05.850231+00:00 [queued]>
+[2023-12-16T05:30:07.967+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-12-16T05:30:07.984+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_spark_task> on 2023-12-16 05:30:05.850231+00:00
+[2023-12-16T05:30:07.991+0000] {standard_task_runner.py:57} INFO - Started process 203 to run task
+[2023-12-16T05:30:08.001+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'assignment_spark_dag', 'run_spark_task', 'manual__2023-12-16T05:30:05.850231+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/assignment_spark_dag.py', '--cfg-path', '/tmp/tmp0qdopu6j']
+[2023-12-16T05:30:08.010+0000] {standard_task_runner.py:85} INFO - Job 65: Subtask run_spark_task
+[2023-12-16T05:30:08.046+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2023-12-16T05:30:08.094+0000] {task_command.py:415} INFO - Running <TaskInstance: assignment_spark_dag.run_spark_task manual__2023-12-16T05:30:05.850231+00:00 [running]> on host dataeng-airflow-scheduler
+[2023-12-16T05:30:08.207+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ahmad_belva' AIRFLOW_CTX_DAG_ID='assignment_spark_dag' AIRFLOW_CTX_TASK_ID='run_spark_task' AIRFLOW_CTX_EXECUTION_DATE='2023-12-16T05:30:05.850231+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-16T05:30:05.850231+00:00'
+[2023-12-16T05:30:19.343+0000] {logging_mixin.py:151} INFO - +---------------+---------------+-------+
+|        country|total_spendings|ranking|
++---------------+---------------+-------+
+| United Kingdom|     8187806.36|      1|
+|    Netherlands|      284661.54|      2|
+|           EIRE|      263276.82|      3|
+|        Germany|      221698.21|      4|
+|         France|       197403.9|      5|
+|      Australia|      137077.27|      6|
+|    Switzerland|       56385.35|      7|
+|          Spain|       54774.58|      8|
+|        Belgium|       40910.96|      9|
+|         Sweden|       36595.91|     10|
+|          Japan|       35340.62|     11|
+|         Norway|       35163.46|     12|
+|       Portugal|       29367.02|     13|
+|        Finland|       22326.74|     14|
+|Channel Islands|       20086.29|     15|
+|        Denmark|       18768.14|     16|
+|          Italy|       16890.51|     17|
+|         Cyprus|       12946.29|     18|
+|        Austria|       10154.32|     19|
+|      Hong Kong|       10117.04|     20|
++---------------+---------------+-------+
+only showing top 20 rows
+[2023-12-16T05:30:20.509+0000] {logging_mixin.py:151} INFO - +----------+---------------+-------+
+|customerid|total_spendings|ranking|
++----------+---------------+-------+
+|     14646|      279489.02|      1|
+|     18102|      256438.49|      2|
+|     17450|      187482.17|      3|
+|     14911|      132572.62|      4|
+|     12415|      123725.45|      5|
+|     14156|      113384.14|      6|
+|     17511|       88125.38|      7|
+|     16684|       65892.08|      8|
+|     13694|        62653.1|      9|
+|     15311|       59419.34|     10|
++----------+---------------+-------+
+[2023-12-16T05:30:21.692+0000] {logging_mixin.py:151} INFO - +----------+-------------+-------+
+|customerid|times_shopped|ranking|
++----------+-------------+-------+
+|     14911|          248|      1|
+|     12748|          224|      2|
+|     17841|          169|      3|
+|     14606|          128|      4|
+|     15311|          118|      5|
+|     13089|          118|      5|
+|     12971|           89|      7|
+|     14527|           86|      8|
+|     13408|           81|      9|
+|     14646|           77|     10|
++----------+-------------+-------+
+[2023-12-16T05:30:22.879+0000] {logging_mixin.py:151} INFO - +---------------+--------------------+------------+-------+
+|        country|           item_name|numbers_sold|ranking|
++---------------+--------------------+------------+-------+
+|      Australia|MINI PAINT SET VI...|        2916|      1|
+|      Australia|  RABBIT NIGHT LIGHT|        1884|      2|
+|        Austria|SET 12 KIDS COLOU...|         288|      1|
+|        Austria|  MINI JIGSAW PURDEY|         240|      2|
+|        Bahrain|ICE CREAM SUNDAE ...|          96|      1|
+|        Bahrain| DOUGHNUT LIP GLOSS |          60|      2|
+|        Belgium|PACK OF 72 RETROS...|         480|      1|
+|        Belgium|ROUND SNACK BOXES...|         420|      2|
+|         Brazil|PINK REGENCY TEAC...|          24|      1|
+|         Brazil|ROSES REGENCY TEA...|          24|      1|
+|         Brazil|SMALL HEART FLOWE...|          24|      1|
+|         Brazil|SET/3 RED GINGHAM...|          24|      1|
+|         Brazil|SET OF 4 PANTRY J...|          24|      1|
+|         Brazil|SET OF 6 SPICE TI...|          24|      1|
+|         Brazil|GREEN REGENCY TEA...|          24|      1|
+|         Brazil|DOLLY GIRL LUNCH BOX|          24|      1|
+|         Canada|WORLD WAR 2 GLIDE...|         288|      2|
+|         Canada|RETRO COFFEE MUGS...|         504|      1|
+|Channel Islands|        RAIN PONCHO |         407|      1|
+|Channel Islands|JUMBO BAG RED RET...|         250|      2|
++---------------+--------------------+------------+-------+
+only showing top 20 rows
+[2023-12-16T05:30:24.307+0000] {logging_mixin.py:151} INFO - +------------+--------------------+------------+-------+
+|month_number|           item_name|numbers_sold|ranking|
++------------+--------------------+------------+-------+
+|           1|WHITE HANGING HEA...|        5456|      1|
+|           1|PACK OF 72 RETROS...|        3327|      2|
+|           2|EMPIRE DESIGN ROS...|        3986|      1|
+|           2|GROW A FLYTRAP OR...|        3795|      2|
+|           3|JUMBO BAG RED RET...|        4923|      1|
+|           3|WORLD WAR 2 GLIDE...|        3888|      2|
+|           4|WORLD WAR 2 GLIDE...|       10128|      1|
+|           4|PACK OF 72 RETROS...|        2768|      2|
+|           5|SMALL POPCORN HOLDER|        6737|      1|
+|           5|PACK OF 60 PINK P...|        3949|      2|
+|           6|ASSORTED COLOURS ...|        3096|      2|
+|           6|JUMBO BAG RED RET...|        3523|      1|
+|           7|GIRLS ALPHABET IR...|        4896|      1|
+|           7|WORLD WAR 2 GLIDE...|        3552|      2|
+|           8|ASSORTED COLOUR B...|        6424|      1|
+|           8|      POPCORN HOLDER|        5181|      2|
+|           9|60 CAKE CASES VIN...|        3669|      2|
+|           9|JUMBO BAG RED RET...|        4043|      1|
+|          10|WORLD WAR 2 GLIDE...|        8174|      1|
+|          10|  RABBIT NIGHT LIGHT|        6245|      2|
++------------+--------------------+------------+-------+
+only showing top 20 rows
+[2023-12-16T05:30:24.308+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-12-16T05:30:24.326+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=assignment_spark_dag, task_id=run_spark_task, execution_date=20231216T053005, start_date=20231216T053007, end_date=20231216T053024
+[2023-12-16T05:30:24.376+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-16T05:30:24.404+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

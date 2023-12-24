@@ -1,0 +1,151 @@
+[2023-12-16T05:37:39.631+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: assignment_spark_dag.run_spark_task manual__2023-12-16T05:37:38.692651+00:00 [queued]>
+[2023-12-16T05:37:39.639+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: assignment_spark_dag.run_spark_task manual__2023-12-16T05:37:38.692651+00:00 [queued]>
+[2023-12-16T05:37:39.639+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-12-16T05:37:39.652+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): run_spark_task> on 2023-12-16 05:37:38.692651+00:00
+[2023-12-16T05:37:39.657+0000] {standard_task_runner.py:57} INFO - Started process 1115 to run task
+[2023-12-16T05:37:39.659+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'assignment_spark_dag', 'run_spark_task', 'manual__2023-12-16T05:37:38.692651+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/assignment_spark_dag.py', '--cfg-path', '/tmp/tmp2xzyxjl0']
+[2023-12-16T05:37:39.661+0000] {standard_task_runner.py:85} INFO - Job 68: Subtask run_spark_task
+[2023-12-16T05:37:39.673+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2023-12-16T05:37:39.699+0000] {task_command.py:415} INFO - Running <TaskInstance: assignment_spark_dag.run_spark_task manual__2023-12-16T05:37:38.692651+00:00 [running]> on host dataeng-airflow-scheduler
+[2023-12-16T05:37:39.767+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ahmad_belva' AIRFLOW_CTX_DAG_ID='assignment_spark_dag' AIRFLOW_CTX_TASK_ID='run_spark_task' AIRFLOW_CTX_EXECUTION_DATE='2023-12-16T05:37:38.692651+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-16T05:37:38.692651+00:00'
+[2023-12-16T05:37:39.769+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-12-16T05:37:39.770+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /spark-scripts/assignment_spark_file.py']
+[2023-12-16T05:37:39.778+0000] {subprocess.py:86} INFO - Output:
+[2023-12-16T05:37:41.818+0000] {subprocess.py:93} INFO - 23/12/16 05:37:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-12-16T05:37:41.937+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2023-12-16T05:37:41.938+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2023-12-16T05:37:45.939+0000] {subprocess.py:93} INFO - 23/12/16 05:37:45 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:45.963+0000] {subprocess.py:93} INFO - 23/12/16 05:37:45 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:45.976+0000] {subprocess.py:93} INFO - 23/12/16 05:37:45 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:48.357+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1]23/12/16 05:37:48 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:48.357+0000] {subprocess.py:93} INFO - 23/12/16 05:37:48 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:48.624+0000] {subprocess.py:93} INFO - 23/12/16 05:37:48 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:48.624+0000] {subprocess.py:93} INFO - 23/12/16 05:37:48 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:49.314+0000] {subprocess.py:93} INFO -                                                                                 23/12/16 05:37:49 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:49.316+0000] {subprocess.py:93} INFO - 23/12/16 05:37:49 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:49.318+0000] {subprocess.py:93} INFO - 23/12/16 05:37:49 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:49.931+0000] {subprocess.py:93} INFO - 23/12/16 05:37:49 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:49.932+0000] {subprocess.py:93} INFO - 23/12/16 05:37:49 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:50.038+0000] {subprocess.py:93} INFO - 23/12/16 05:37:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:50.039+0000] {subprocess.py:93} INFO - 23/12/16 05:37:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:50.320+0000] {subprocess.py:93} INFO - 23/12/16 05:37:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:50.322+0000] {subprocess.py:93} INFO - 23/12/16 05:37:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:50.324+0000] {subprocess.py:93} INFO - 23/12/16 05:37:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:50.756+0000] {subprocess.py:93} INFO - 23/12/16 05:37:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:50.757+0000] {subprocess.py:93} INFO - 23/12/16 05:37:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:50.987+0000] {subprocess.py:93} INFO - 23/12/16 05:37:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:50.988+0000] {subprocess.py:93} INFO - 23/12/16 05:37:50 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:51.098+0000] {subprocess.py:93} INFO - 23/12/16 05:37:51 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:51.099+0000] {subprocess.py:93} INFO - 23/12/16 05:37:51 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2023-12-16T05:37:53.748+0000] {subprocess.py:93} INFO - [Stage 28:>                                                         (0 + 1) / 1]                                                                                +---------------+---------------+-------+
+[2023-12-16T05:37:53.749+0000] {subprocess.py:93} INFO - |        country|total_spendings|ranking|
+[2023-12-16T05:37:53.749+0000] {subprocess.py:93} INFO - +---------------+---------------+-------+
+[2023-12-16T05:37:53.750+0000] {subprocess.py:93} INFO - | United Kingdom|     8187806.36|      1|
+[2023-12-16T05:37:53.751+0000] {subprocess.py:93} INFO - |    Netherlands|      284661.54|      2|
+[2023-12-16T05:37:53.751+0000] {subprocess.py:93} INFO - |           EIRE|      263276.82|      3|
+[2023-12-16T05:37:53.752+0000] {subprocess.py:93} INFO - |        Germany|      221698.21|      4|
+[2023-12-16T05:37:53.752+0000] {subprocess.py:93} INFO - |         France|       197403.9|      5|
+[2023-12-16T05:37:53.753+0000] {subprocess.py:93} INFO - |      Australia|      137077.27|      6|
+[2023-12-16T05:37:53.753+0000] {subprocess.py:93} INFO - |    Switzerland|       56385.35|      7|
+[2023-12-16T05:37:53.754+0000] {subprocess.py:93} INFO - |          Spain|       54774.58|      8|
+[2023-12-16T05:37:53.754+0000] {subprocess.py:93} INFO - |        Belgium|       40910.96|      9|
+[2023-12-16T05:37:53.755+0000] {subprocess.py:93} INFO - |         Sweden|       36595.91|     10|
+[2023-12-16T05:37:53.755+0000] {subprocess.py:93} INFO - |          Japan|       35340.62|     11|
+[2023-12-16T05:37:53.756+0000] {subprocess.py:93} INFO - |         Norway|       35163.46|     12|
+[2023-12-16T05:37:53.756+0000] {subprocess.py:93} INFO - |       Portugal|       29367.02|     13|
+[2023-12-16T05:37:53.757+0000] {subprocess.py:93} INFO - |        Finland|       22326.74|     14|
+[2023-12-16T05:37:53.758+0000] {subprocess.py:93} INFO - |Channel Islands|       20086.29|     15|
+[2023-12-16T05:37:53.758+0000] {subprocess.py:93} INFO - |        Denmark|       18768.14|     16|
+[2023-12-16T05:37:53.758+0000] {subprocess.py:93} INFO - |          Italy|       16890.51|     17|
+[2023-12-16T05:37:53.759+0000] {subprocess.py:93} INFO - |         Cyprus|       12946.29|     18|
+[2023-12-16T05:37:53.759+0000] {subprocess.py:93} INFO - |        Austria|       10154.32|     19|
+[2023-12-16T05:37:53.760+0000] {subprocess.py:93} INFO - |      Hong Kong|       10117.04|     20|
+[2023-12-16T05:37:53.761+0000] {subprocess.py:93} INFO - +---------------+---------------+-------+
+[2023-12-16T05:37:53.761+0000] {subprocess.py:93} INFO - only showing top 20 rows
+[2023-12-16T05:37:53.762+0000] {subprocess.py:93} INFO - 
+[2023-12-16T05:37:53.762+0000] {subprocess.py:93} INFO - +----------+---------------+-------+
+[2023-12-16T05:37:53.763+0000] {subprocess.py:93} INFO - |customerid|total_spendings|ranking|
+[2023-12-16T05:37:53.763+0000] {subprocess.py:93} INFO - +----------+---------------+-------+
+[2023-12-16T05:37:53.764+0000] {subprocess.py:93} INFO - |     14646|      279489.02|      1|
+[2023-12-16T05:37:53.764+0000] {subprocess.py:93} INFO - |     18102|      256438.49|      2|
+[2023-12-16T05:37:53.765+0000] {subprocess.py:93} INFO - |     17450|      187482.17|      3|
+[2023-12-16T05:37:53.765+0000] {subprocess.py:93} INFO - |     14911|      132572.62|      4|
+[2023-12-16T05:37:53.766+0000] {subprocess.py:93} INFO - |     12415|      123725.45|      5|
+[2023-12-16T05:37:53.766+0000] {subprocess.py:93} INFO - |     14156|      113384.14|      6|
+[2023-12-16T05:37:53.767+0000] {subprocess.py:93} INFO - |     17511|       88125.38|      7|
+[2023-12-16T05:37:53.767+0000] {subprocess.py:93} INFO - |     16684|       65892.08|      8|
+[2023-12-16T05:37:53.768+0000] {subprocess.py:93} INFO - |     13694|        62653.1|      9|
+[2023-12-16T05:37:53.768+0000] {subprocess.py:93} INFO - |     15311|       59419.34|     10|
+[2023-12-16T05:37:53.768+0000] {subprocess.py:93} INFO - +----------+---------------+-------+
+[2023-12-16T05:37:53.769+0000] {subprocess.py:93} INFO - 
+[2023-12-16T05:37:53.769+0000] {subprocess.py:93} INFO - +----------+-------------+-------+
+[2023-12-16T05:37:53.769+0000] {subprocess.py:93} INFO - |customerid|times_shopped|ranking|
+[2023-12-16T05:37:53.770+0000] {subprocess.py:93} INFO - +----------+-------------+-------+
+[2023-12-16T05:37:53.770+0000] {subprocess.py:93} INFO - |     14911|          248|      1|
+[2023-12-16T05:37:53.771+0000] {subprocess.py:93} INFO - |     12748|          224|      2|
+[2023-12-16T05:37:53.771+0000] {subprocess.py:93} INFO - |     17841|          169|      3|
+[2023-12-16T05:37:53.771+0000] {subprocess.py:93} INFO - |     14606|          128|      4|
+[2023-12-16T05:37:53.772+0000] {subprocess.py:93} INFO - |     15311|          118|      5|
+[2023-12-16T05:37:53.772+0000] {subprocess.py:93} INFO - |     13089|          118|      5|
+[2023-12-16T05:37:53.772+0000] {subprocess.py:93} INFO - |     12971|           89|      7|
+[2023-12-16T05:37:53.773+0000] {subprocess.py:93} INFO - |     14527|           86|      8|
+[2023-12-16T05:37:53.773+0000] {subprocess.py:93} INFO - |     13408|           81|      9|
+[2023-12-16T05:37:53.774+0000] {subprocess.py:93} INFO - |     14646|           77|     10|
+[2023-12-16T05:37:53.774+0000] {subprocess.py:93} INFO - +----------+-------------+-------+
+[2023-12-16T05:37:53.774+0000] {subprocess.py:93} INFO - 
+[2023-12-16T05:37:53.775+0000] {subprocess.py:93} INFO - +---------------+--------------------+------------+-------+
+[2023-12-16T05:37:53.775+0000] {subprocess.py:93} INFO - |        country|           item_name|numbers_sold|ranking|
+[2023-12-16T05:37:53.775+0000] {subprocess.py:93} INFO - +---------------+--------------------+------------+-------+
+[2023-12-16T05:37:53.776+0000] {subprocess.py:93} INFO - |      Australia|MINI PAINT SET VI...|        2916|      1|
+[2023-12-16T05:37:53.776+0000] {subprocess.py:93} INFO - |      Australia|  RABBIT NIGHT LIGHT|        1884|      2|
+[2023-12-16T05:37:53.776+0000] {subprocess.py:93} INFO - |        Austria|SET 12 KIDS COLOU...|         288|      1|
+[2023-12-16T05:37:53.777+0000] {subprocess.py:93} INFO - |        Austria|  MINI JIGSAW PURDEY|         240|      2|
+[2023-12-16T05:37:53.777+0000] {subprocess.py:93} INFO - |        Bahrain|ICE CREAM SUNDAE ...|          96|      1|
+[2023-12-16T05:37:53.777+0000] {subprocess.py:93} INFO - |        Bahrain| DOUGHNUT LIP GLOSS |          60|      2|
+[2023-12-16T05:37:53.778+0000] {subprocess.py:93} INFO - |        Belgium|PACK OF 72 RETROS...|         480|      1|
+[2023-12-16T05:37:53.778+0000] {subprocess.py:93} INFO - |        Belgium|ROUND SNACK BOXES...|         420|      2|
+[2023-12-16T05:37:53.778+0000] {subprocess.py:93} INFO - |         Brazil|PINK REGENCY TEAC...|          24|      1|
+[2023-12-16T05:37:53.779+0000] {subprocess.py:93} INFO - |         Brazil|ROSES REGENCY TEA...|          24|      1|
+[2023-12-16T05:37:53.779+0000] {subprocess.py:93} INFO - |         Brazil|SMALL HEART FLOWE...|          24|      1|
+[2023-12-16T05:37:53.779+0000] {subprocess.py:93} INFO - |         Brazil|SET/3 RED GINGHAM...|          24|      1|
+[2023-12-16T05:37:53.779+0000] {subprocess.py:93} INFO - |         Brazil|SET OF 4 PANTRY J...|          24|      1|
+[2023-12-16T05:37:53.780+0000] {subprocess.py:93} INFO - |         Brazil|SET OF 6 SPICE TI...|          24|      1|
+[2023-12-16T05:37:53.780+0000] {subprocess.py:93} INFO - |         Brazil|GREEN REGENCY TEA...|          24|      1|
+[2023-12-16T05:37:53.780+0000] {subprocess.py:93} INFO - |         Brazil|DOLLY GIRL LUNCH BOX|          24|      1|
+[2023-12-16T05:37:53.781+0000] {subprocess.py:93} INFO - |         Canada|WORLD WAR 2 GLIDE...|         288|      2|
+[2023-12-16T05:37:53.781+0000] {subprocess.py:93} INFO - |         Canada|RETRO COFFEE MUGS...|         504|      1|
+[2023-12-16T05:37:53.781+0000] {subprocess.py:93} INFO - |Channel Islands|        RAIN PONCHO |         407|      1|
+[2023-12-16T05:37:53.782+0000] {subprocess.py:93} INFO - |Channel Islands|JUMBO BAG RED RET...|         250|      2|
+[2023-12-16T05:37:53.782+0000] {subprocess.py:93} INFO - +---------------+--------------------+------------+-------+
+[2023-12-16T05:37:53.782+0000] {subprocess.py:93} INFO - only showing top 20 rows
+[2023-12-16T05:37:53.783+0000] {subprocess.py:93} INFO - 
+[2023-12-16T05:37:53.783+0000] {subprocess.py:93} INFO - +------------+--------------------+------------+-------+
+[2023-12-16T05:37:53.783+0000] {subprocess.py:93} INFO - |month_number|           item_name|numbers_sold|ranking|
+[2023-12-16T05:37:53.784+0000] {subprocess.py:93} INFO - +------------+--------------------+------------+-------+
+[2023-12-16T05:37:53.784+0000] {subprocess.py:93} INFO - |           1|WHITE HANGING HEA...|        5456|      1|
+[2023-12-16T05:37:53.784+0000] {subprocess.py:93} INFO - |           1|PACK OF 72 RETROS...|        3327|      2|
+[2023-12-16T05:37:53.785+0000] {subprocess.py:93} INFO - |           2|EMPIRE DESIGN ROS...|        3986|      1|
+[2023-12-16T05:37:53.785+0000] {subprocess.py:93} INFO - |           2|GROW A FLYTRAP OR...|        3795|      2|
+[2023-12-16T05:37:53.785+0000] {subprocess.py:93} INFO - |           3|JUMBO BAG RED RET...|        4923|      1|
+[2023-12-16T05:37:53.786+0000] {subprocess.py:93} INFO - |           3|WORLD WAR 2 GLIDE...|        3888|      2|
+[2023-12-16T05:37:53.786+0000] {subprocess.py:93} INFO - |           4|WORLD WAR 2 GLIDE...|       10128|      1|
+[2023-12-16T05:37:53.786+0000] {subprocess.py:93} INFO - |           4|PACK OF 72 RETROS...|        2768|      2|
+[2023-12-16T05:37:53.787+0000] {subprocess.py:93} INFO - |           5|SMALL POPCORN HOLDER|        6737|      1|
+[2023-12-16T05:37:53.787+0000] {subprocess.py:93} INFO - |           5|PACK OF 60 PINK P...|        3949|      2|
+[2023-12-16T05:37:53.787+0000] {subprocess.py:93} INFO - |           6|ASSORTED COLOURS ...|        3096|      2|
+[2023-12-16T05:37:53.788+0000] {subprocess.py:93} INFO - |           6|JUMBO BAG RED RET...|        3523|      1|
+[2023-12-16T05:37:53.788+0000] {subprocess.py:93} INFO - |           7|GIRLS ALPHABET IR...|        4896|      1|
+[2023-12-16T05:37:53.788+0000] {subprocess.py:93} INFO - |           7|WORLD WAR 2 GLIDE...|        3552|      2|
+[2023-12-16T05:37:53.788+0000] {subprocess.py:93} INFO - |           8|ASSORTED COLOUR B...|        6424|      1|
+[2023-12-16T05:37:53.789+0000] {subprocess.py:93} INFO - |           8|      POPCORN HOLDER|        5181|      2|
+[2023-12-16T05:37:53.789+0000] {subprocess.py:93} INFO - |           9|60 CAKE CASES VIN...|        3669|      2|
+[2023-12-16T05:37:53.789+0000] {subprocess.py:93} INFO - |           9|JUMBO BAG RED RET...|        4043|      1|
+[2023-12-16T05:37:53.790+0000] {subprocess.py:93} INFO - |          10|WORLD WAR 2 GLIDE...|        8174|      1|
+[2023-12-16T05:37:53.790+0000] {subprocess.py:93} INFO - |          10|  RABBIT NIGHT LIGHT|        6245|      2|
+[2023-12-16T05:37:53.790+0000] {subprocess.py:93} INFO - +------------+--------------------+------------+-------+
+[2023-12-16T05:37:53.791+0000] {subprocess.py:93} INFO - only showing top 20 rows
+[2023-12-16T05:37:53.791+0000] {subprocess.py:93} INFO - 
+[2023-12-16T05:37:54.237+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-12-16T05:37:54.261+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=assignment_spark_dag, task_id=run_spark_task, execution_date=20231216T053738, start_date=20231216T053739, end_date=20231216T053754
+[2023-12-16T05:37:54.312+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-16T05:37:54.326+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

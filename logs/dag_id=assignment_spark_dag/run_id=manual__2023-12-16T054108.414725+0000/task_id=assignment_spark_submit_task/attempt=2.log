@@ -1,0 +1,117 @@
+[2023-12-16T05:41:45.914+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: assignment_spark_dag.assignment_spark_submit_task manual__2023-12-16T05:41:08.414725+00:00 [queued]>
+[2023-12-16T05:41:45.921+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: assignment_spark_dag.assignment_spark_submit_task manual__2023-12-16T05:41:08.414725+00:00 [queued]>
+[2023-12-16T05:41:45.921+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2023-12-16T05:41:45.934+0000] {taskinstance.py:1380} INFO - Executing <Task(SparkSubmitOperator): assignment_spark_submit_task> on 2023-12-16 05:41:08.414725+00:00
+[2023-12-16T05:41:45.939+0000] {standard_task_runner.py:57} INFO - Started process 1787 to run task
+[2023-12-16T05:41:45.941+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'assignment_spark_dag', 'assignment_spark_submit_task', 'manual__2023-12-16T05:41:08.414725+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/assignment_spark_dag.py', '--cfg-path', '/tmp/tmpd47m1x11']
+[2023-12-16T05:41:45.943+0000] {standard_task_runner.py:85} INFO - Job 72: Subtask assignment_spark_submit_task
+[2023-12-16T05:41:45.955+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2023-12-16T05:41:45.980+0000] {task_command.py:415} INFO - Running <TaskInstance: assignment_spark_dag.assignment_spark_submit_task manual__2023-12-16T05:41:08.414725+00:00 [running]> on host dataeng-airflow-scheduler
+[2023-12-16T05:41:46.046+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ahmad_belva' AIRFLOW_CTX_DAG_ID='assignment_spark_dag' AIRFLOW_CTX_TASK_ID='assignment_spark_submit_task' AIRFLOW_CTX_EXECUTION_DATE='2023-12-16T05:41:08.414725+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-16T05:41:08.414725+00:00'
+[2023-12-16T05:41:46.054+0000] {base.py:73} INFO - Using connection ID 'spark_tgs' for task execution.
+[2023-12-16T05:41:46.055+0000] {spark_submit.py:351} INFO - Spark-Submit cmd: spark-submit --master spark://dataeng-spark-master:7077 --name arrow-spark /spark-scripts/assignment_spark_file.py
+[2023-12-16T05:41:48.497+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO SparkContext: Running Spark version 3.3.2
+[2023-12-16T05:41:48.545+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-12-16T05:41:48.618+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO ResourceUtils: ==============================================================
+[2023-12-16T05:41:48.619+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2023-12-16T05:41:48.619+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO ResourceUtils: ==============================================================
+[2023-12-16T05:41:48.619+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO SparkContext: Submitted application: day15_assignment
+[2023-12-16T05:41:48.636+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2023-12-16T05:41:48.647+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO ResourceProfile: Limiting resource is cpu
+[2023-12-16T05:41:48.648+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2023-12-16T05:41:48.686+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO SecurityManager: Changing view acls to: airflow
+[2023-12-16T05:41:48.687+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO SecurityManager: Changing modify acls to: airflow
+[2023-12-16T05:41:48.687+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO SecurityManager: Changing view acls groups to:
+[2023-12-16T05:41:48.688+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO SecurityManager: Changing modify acls groups to:
+[2023-12-16T05:41:48.688+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(airflow); groups with view permissions: Set(); users  with modify permissions: Set(airflow); groups with modify permissions: Set()
+[2023-12-16T05:41:48.891+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO Utils: Successfully started service 'sparkDriver' on port 36269.
+[2023-12-16T05:41:48.915+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO SparkEnv: Registering MapOutputTracker
+[2023-12-16T05:41:48.944+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO SparkEnv: Registering BlockManagerMaster
+[2023-12-16T05:41:48.956+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2023-12-16T05:41:48.957+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2023-12-16T05:41:48.960+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2023-12-16T05:41:48.978+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-f0680a42-fc91-44d2-ae8d-e4aae7407e43
+[2023-12-16T05:41:48.991+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:48 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2023-12-16T05:41:49.004+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO SparkEnv: Registering OutputCommitCoordinator
+[2023-12-16T05:41:49.172+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2023-12-16T05:41:49.207+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO SparkContext: Added JAR /jars/postgresql-42.2.27.jar at spark://dataeng-airflow-scheduler:36269/jars/postgresql-42.2.27.jar with timestamp 1702705308487
+[2023-12-16T05:41:49.280+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://dataeng-spark-master:7077...
+[2023-12-16T05:41:49.312+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO TransportClientFactory: Successfully created connection to dataeng-spark-master/172.22.0.5:7077 after 18 ms (0 ms spent in bootstraps)
+[2023-12-16T05:41:49.381+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20231216054149-0005
+[2023-12-16T05:41:49.382+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20231216054149-0005/0 on worker-20231216052750-172.22.0.6-42295 (172.22.0.6:42295) with 1 core(s)
+[2023-12-16T05:41:49.384+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO StandaloneSchedulerBackend: Granted executor ID app-20231216054149-0005/0 on hostPort 172.22.0.6:42295 with 1 core(s), 1024.0 MiB RAM
+[2023-12-16T05:41:49.386+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38923.
+[2023-12-16T05:41:49.387+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO NettyBlockTransferService: Server created on dataeng-airflow-scheduler:38923
+[2023-12-16T05:41:49.388+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2023-12-16T05:41:49.393+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, dataeng-airflow-scheduler, 38923, None)
+[2023-12-16T05:41:49.397+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO BlockManagerMasterEndpoint: Registering block manager dataeng-airflow-scheduler:38923 with 434.4 MiB RAM, BlockManagerId(driver, dataeng-airflow-scheduler, 38923, None)
+[2023-12-16T05:41:49.399+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, dataeng-airflow-scheduler, 38923, None)
+[2023-12-16T05:41:49.400+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, dataeng-airflow-scheduler, 38923, None)
+[2023-12-16T05:41:49.415+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20231216054149-0005/0 is now RUNNING
+[2023-12-16T05:41:49.573+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2023-12-16T05:41:49.768+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2023-12-16T05:41:49.775+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:49 INFO SharedState: Warehouse path is 'file:/opt/airflow/spark-warehouse'.
+[2023-12-16T05:41:50.424+0000] {spark_submit.py:521} INFO - Traceback (most recent call last):
+[2023-12-16T05:41:50.425+0000] {spark_submit.py:521} INFO - File "/spark-scripts/assignment_spark_file.py", line 35, in <module>
+[2023-12-16T05:41:50.426+0000] {spark_submit.py:521} INFO - retail_df = spark.read.jdbc(
+[2023-12-16T05:41:50.427+0000] {spark_submit.py:521} INFO - File "/home/airflow/.local/lib/python3.9/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 716, in jdbc
+[2023-12-16T05:41:50.427+0000] {spark_submit.py:521} INFO - File "/home/airflow/.local/lib/python3.9/site-packages/pyspark/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1321, in __call__
+[2023-12-16T05:41:50.427+0000] {spark_submit.py:521} INFO - File "/home/airflow/.local/lib/python3.9/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 190, in deco
+[2023-12-16T05:41:50.428+0000] {spark_submit.py:521} INFO - File "/home/airflow/.local/lib/python3.9/site-packages/pyspark/python/lib/py4j-0.10.9.5-src.zip/py4j/protocol.py", line 326, in get_return_value
+[2023-12-16T05:41:50.428+0000] {spark_submit.py:521} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o27.jdbc.
+[2023-12-16T05:41:50.428+0000] {spark_submit.py:521} INFO - : java.lang.ClassNotFoundException: org.postgresql.Driver
+[2023-12-16T05:41:50.429+0000] {spark_submit.py:521} INFO - at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:476)
+[2023-12-16T05:41:50.429+0000] {spark_submit.py:521} INFO - at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:594)
+[2023-12-16T05:41:50.429+0000] {spark_submit.py:521} INFO - at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+[2023-12-16T05:41:50.430+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.execution.datasources.jdbc.DriverRegistry$.register(DriverRegistry.scala:46)
+[2023-12-16T05:41:50.430+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.$anonfun$driverClass$1(JDBCOptions.scala:101)
+[2023-12-16T05:41:50.430+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.$anonfun$driverClass$1$adapted(JDBCOptions.scala:101)
+[2023-12-16T05:41:50.431+0000] {spark_submit.py:521} INFO - at scala.Option.foreach(Option.scala:407)
+[2023-12-16T05:41:50.431+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.<init>(JDBCOptions.scala:101)
+[2023-12-16T05:41:50.431+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.<init>(JDBCOptions.scala:39)
+[2023-12-16T05:41:50.432+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:34)
+[2023-12-16T05:41:50.432+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:350)
+[2023-12-16T05:41:50.432+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:228)
+[2023-12-16T05:41:50.432+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:210)
+[2023-12-16T05:41:50.433+0000] {spark_submit.py:521} INFO - at scala.Option.getOrElse(Option.scala:189)
+[2023-12-16T05:41:50.433+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:210)
+[2023-12-16T05:41:50.433+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:171)
+[2023-12-16T05:41:50.434+0000] {spark_submit.py:521} INFO - at org.apache.spark.sql.DataFrameReader.jdbc(DataFrameReader.scala:248)
+[2023-12-16T05:41:50.434+0000] {spark_submit.py:521} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2023-12-16T05:41:50.434+0000] {spark_submit.py:521} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2023-12-16T05:41:50.435+0000] {spark_submit.py:521} INFO - at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2023-12-16T05:41:50.435+0000] {spark_submit.py:521} INFO - at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2023-12-16T05:41:50.435+0000] {spark_submit.py:521} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2023-12-16T05:41:50.435+0000] {spark_submit.py:521} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2023-12-16T05:41:50.436+0000] {spark_submit.py:521} INFO - at py4j.Gateway.invoke(Gateway.java:282)
+[2023-12-16T05:41:50.436+0000] {spark_submit.py:521} INFO - at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2023-12-16T05:41:50.436+0000] {spark_submit.py:521} INFO - at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2023-12-16T05:41:50.437+0000] {spark_submit.py:521} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2023-12-16T05:41:50.437+0000] {spark_submit.py:521} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2023-12-16T05:41:50.437+0000] {spark_submit.py:521} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2023-12-16T05:41:50.438+0000] {spark_submit.py:521} INFO - 
+[2023-12-16T05:41:50.493+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO SparkContext: Invoking stop() from shutdown hook
+[2023-12-16T05:41:50.506+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO SparkUI: Stopped Spark web UI at http://dataeng-airflow-scheduler:4040
+[2023-12-16T05:41:50.510+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO StandaloneSchedulerBackend: Shutting down all executors
+[2023-12-16T05:41:50.514+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+[2023-12-16T05:41:50.531+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2023-12-16T05:41:50.541+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO MemoryStore: MemoryStore cleared
+[2023-12-16T05:41:50.541+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO BlockManager: BlockManager stopped
+[2023-12-16T05:41:50.547+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2023-12-16T05:41:50.549+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2023-12-16T05:41:50.557+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO SparkContext: Successfully stopped SparkContext
+[2023-12-16T05:41:50.557+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO ShutdownHookManager: Shutdown hook called
+[2023-12-16T05:41:50.558+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO ShutdownHookManager: Deleting directory /tmp/spark-e8000f4d-df6b-40e5-a4d3-f9e60c316236
+[2023-12-16T05:41:50.561+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO ShutdownHookManager: Deleting directory /tmp/spark-e8000f4d-df6b-40e5-a4d3-f9e60c316236/pyspark-f1048e3e-cbc9-4b9c-86b8-cf5684b0ff5a
+[2023-12-16T05:41:50.563+0000] {spark_submit.py:521} INFO - 23/12/16 05:41:50 INFO ShutdownHookManager: Deleting directory /tmp/spark-7e1aa1c3-27af-4238-9f03-6b9322786ce0
+[2023-12-16T05:41:50.604+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 160, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 452, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://dataeng-spark-master:7077 --name arrow-spark /spark-scripts/assignment_spark_file.py. Error code is: 1.
+[2023-12-16T05:41:50.607+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=assignment_spark_dag, task_id=assignment_spark_submit_task, execution_date=20231216T054108, start_date=20231216T054145, end_date=20231216T054150
+[2023-12-16T05:41:50.620+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 72 for task assignment_spark_submit_task (Cannot execute: spark-submit --master spark://dataeng-spark-master:7077 --name arrow-spark /spark-scripts/assignment_spark_file.py. Error code is: 1.; 1787)
+[2023-12-16T05:41:50.648+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-16T05:41:50.661+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
