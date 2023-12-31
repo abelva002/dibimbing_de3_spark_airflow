@@ -14,3 +14,6 @@ airflow connections add 'spark_tgs' \
     --conn-host $SPARK_FULL_HOST_NAME \
     --conn-port $SPARK_MASTER_PORT
 airflow webserver
+chmod -R u+w /opt/bitnami/spark/checkpoint
+chmod -R a+rwX /checkpoint/checkpoint_dir
+chmod 777
